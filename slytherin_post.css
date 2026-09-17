@@ -178,8 +178,8 @@
 }
 .sly-post-texto-scroll p { margin: 0 0 16px 0; }
 .sly-post-texto-scroll p:last-child { margin-bottom: 0; }
-.sly-post-texto-scroll b { color: #e59a5a; font-weight: 700; }
-.sly-post-texto-scroll i { color: #efc9a0; font-style: italic; }
+.sly-post-texto-scroll b { color: #5f9c74; font-weight: 700; }
+.sly-post-texto-scroll i { color: #7fbf92; font-style: italic; }
 .sly-post-texto-scroll em {
   color: var(--sly-post-acento);
   background: var(--sly-post-acento-suave);
