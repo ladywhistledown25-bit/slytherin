@@ -79,7 +79,7 @@
 .sly-squad-cronologia:focus-within .sly-squad-cronologia-lista {
   max-height: 320px;
 }
-.sly-squad-cronologia-item {
+.sly-squad-contenedor .sly-squad-cronologia-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -91,7 +91,7 @@
   border-top: 1px solid var(--sly-squad-borde);
   transition: background 0.15s ease;
 }
-.sly-squad-cronologia-item:hover { background: var(--sly-squad-acento-suave); }
+.sly-squad-contenedor .sly-squad-cronologia-item:hover { background: var(--sly-squad-acento-suave); }
 .sly-squad-cronologia-item .sly-squad-pluma-tema {
   width: 15px;
   height: 15px;

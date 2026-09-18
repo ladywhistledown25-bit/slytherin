@@ -79,7 +79,7 @@
 .sly-1x1-cronologia:focus-within .sly-1x1-cronologia-lista {
   max-height: 320px;
 }
-.sly-1x1-cronologia-item {
+.sly-1x1-contenedor .sly-1x1-cronologia-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -91,7 +91,7 @@
   border-top: 1px solid var(--sly-1x1-borde);
   transition: background 0.15s ease;
 }
-.sly-1x1-cronologia-item:hover { background: var(--sly-1x1-acento-suave); }
+.sly-1x1-contenedor .sly-1x1-cronologia-item:hover { background: var(--sly-1x1-acento-suave); }
 .sly-1x1-cronologia-item .sly-1x1-pluma-tema {
   width: 15px;
   height: 15px;
@@ -270,7 +270,7 @@
   text-align: justify;
   white-space: pre-line;
 }
-.sly-1x1-texto-scroll p { margin: 0 0 16px 0; }
+.sly-1x1
 .sly-1x1-texto-scroll b { color: #5f9c74; font-weight: 700; }
 .sly-1x1-texto-scroll i { color: #7fbf92; font-style: italic; }
 .sly-1x1-texto-scroll em {
