@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=EB+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
-/* ===== BANNER + ESCUDO ===== */
+/* ===== BANNER ===== */
 .sly-1x1-banner {
   position: relative;
   width: 100%;
@@ -28,7 +28,7 @@
   z-index: 3;
 }
 
-/* ===== CRONOLOGÍA (acordeón, reemplaza la fila de íconos) ===== */
+/* ===== CRONOLOGÍA ===== */
 .sly-1x1-cronologia {
   border-bottom: 1px solid var(--sly-1x1-borde);
   margin-top: 28px;
@@ -112,7 +112,7 @@
   60% { transform: translateY(-3px); }
 }
 
-/* ===== DIVISOR ORNAMENTAL ===== */
+/* ===== DIVISOR ===== */
 .sly-1x1-divisor {
   text-align: center;
   color: var(--sly-1x1-acento);
@@ -122,7 +122,7 @@
   opacity: 0.8;
 }
 
-/* ===== CAJA PRINCIPAL: íconos verticales a la izquierda + resumen ===== */
+/* ===== CAJA PRINCIPAL ===== */
 .sly-1x1-caja-principal {
   display: flex;
   gap: 18px;
@@ -281,7 +281,7 @@
 }
 .sly-1x1-texto-scroll p:last-child { margin-bottom: 0; }
 
-/* ===== PERSONAJES (1x1) ===== */
+/* ===== PERSONAJES ===== */
 .sly-1x1-seccion-personajes {
   padding: 0 20px;
   margin-top: 6px;
