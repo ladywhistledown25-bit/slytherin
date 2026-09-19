@@ -174,6 +174,8 @@
   fill: none;
   stroke-width: 1.5;
 }
+
+sly-squad-circulo-icono i { width: 16px; height: 16px; font-size: 13px; line-height: 1; color: var(--sly-squad-acento); display: flex; align-items: center; justify-content: center; }
 .sly-squad-item-icono-v:hover .sly-squad-circulo-icono,
 .sly-squad-item-icono-v:focus-within .sly-squad-circulo-icono {
   border-color: var(--sly-squad-acento);
@@ -362,11 +364,6 @@
 .sly-squad-credits {
   text-align: center;
   margin-top: 22px;
-}
-.sly-squad-credit-flourish {
-  color: rgba(111, 174, 130, 0.45);
-  font-size: 10px;
-  margin: 0 10px;
 }
 .sly-squad-contenedor .sly-squad-credit-name {
   font-family: 'Cormorant Garamond', serif;

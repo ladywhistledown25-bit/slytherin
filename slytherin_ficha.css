@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=EB+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=EB+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 body{ background:#0b0f0d; margin:0; padding:30px 20px; }
 
@@ -36,19 +36,7 @@ body{ background:#0b0f0d; margin:0; padding:30px 20px; }
   display: block;
   filter: saturate(0.55) brightness(0.75) contrast(1.05);
 }
-.sly-ficha-escudo {
-  position: absolute;
-  left: 16px;
-  bottom: -22px;
-  width: 118px;
-  height: 118px;
-  background-image: url('Slytherin.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  filter: sepia(1) hue-rotate(80deg) saturate(1.7) brightness(0.45) contrast(1.1) drop-shadow(0 4px 8px rgba(0,0,0,0.6));
-  z-index: 3;
-}
+
 .sly-ficha-faceclaim {
   position: absolute;
   left: 16px;
@@ -95,132 +83,8 @@ body{ background:#0b0f0d; margin:0; padding:30px 20px; }
 }
 
 /* ===== TABLILLA POST (caja principal + sidebar iconos) ===== */
-.sly-ficha-caja-principal {
-  display: flex;
-  gap: 18px;
-  padding: 0 20px;
-}
-.sly-ficha-sidebar-iconos {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  width: 34px;
-  flex-shrink: 0;
-}
-.sly-ficha-iconos-divisor {
-  display: flex;
-  align-items: center;
-  color: var(--sly-ficha-acento);
-  font-size: 8px;
-  line-height: 1;
-  gap: 5px;
-  padding: 2px 0;
-}
-.sly-ficha-iconos-divisor span {
-  flex: 1;
-  height: 1px;
-  background: var(--sly-ficha-borde);
-}
-.sly-ficha-item-icono-v {
-  position: relative;
-  z-index: 1;
-}
-.sly-ficha-item-icono-v:hover { z-index: 10; }
-.sly-ficha-item-icono-v:focus-within { z-index: 10; }
-.sly-ficha-circulo-icono {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  border: 1px solid var(--sly-ficha-borde);
-  background: var(--sly-ficha-bg-panel);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: box-shadow 0.2s ease, border-color 0.2s ease;
-}
-.sly-ficha-circulo-icono svg {
-  width: 15px;
-  height: 15px;
-  stroke: var(--sly-ficha-acento);
-  fill: none;
-  stroke-width: 1.5;
-}
-.sly-ficha-item-icono-v:hover .sly-ficha-circulo-icono,
-.sly-ficha-item-icono-v:focus-within .sly-ficha-circulo-icono {
-  border-color: var(--sly-ficha-acento);
-  box-shadow: 0 0 8px rgba(111, 174, 130, 0.45);
-}
-.sly-ficha-panel-icono-v {
-  position: absolute;
-  top: 0;
-  right: calc(100% + 8px);
-  height: 34px;
-  max-width: 0;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  background: var(--sly-ficha-bg-panel);
-  border: 1px solid var(--sly-ficha-borde);
-  border-right: none;
-  border-radius: 10px 0 0 10px;
-  white-space: nowrap;
-  opacity: 0;
-  transform: translateY(4px) scale(0.97);
-  transform-origin: right center;
-  box-shadow: -8px 8px 18px rgba(0, 0, 0, 0.35);
-  transition: max-width 0.3s ease, padding 0.3s ease, opacity 0.2s ease, transform 0.2s ease;
-  padding: 0;
-}
-.sly-ficha-item-icono-v:hover .sly-ficha-panel-icono-v,
-.sly-ficha-item-icono-v:focus-within .sly-ficha-panel-icono-v {
-  max-width: 220px;
-  padding: 0 14px;
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-.sly-ficha-panel-icono-v .sly-ficha-contenido-panel-v {
-  line-height: 1.3;
-}
-.sly-ficha-etiqueta-dato-v {
-  display: block;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 8.5px;
-  letter-spacing: 0.6px;
-  color: var(--sly-ficha-acento);
-  text-transform: uppercase;
-  margin-bottom: 2px;
-}
-.sly-ficha-valor-dato-v {
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 9px;
-  color: var(--sly-ficha-texto);
-}
-.sly-ficha-contenido-post {
-  flex: 1;
-  min-width: 0;
-  border: 1px solid var(--sly-ficha-borde);
-  background: var(--sly-ficha-bg-panel);
-  border-radius: 8px;
-  padding: 18px 18px 22px 18px;
-}
-.sly-ficha-texto-scroll {
-  font-family: 'Georgia', 'Times New Roman', serif;
-  max-height: 450px;
-  overflow-y: auto;
-  padding: 6px 10px 18px;
-  font-size: 11px;
-  line-height: 1.75;
-  text-align: justify;
-  white-space: pre-line;
-}
-.sly-ficha-texto-scroll b { color: #5f9c74; font-weight: 700; }
-.sly-ficha-texto-scroll i { color: #7fbf92; font-style: italic; }
-.sly-ficha-texto-scroll em {
-  color: var(--sly-ficha-acento);
-  background: var(--sly-ficha-acento-suave);
-  padding: 0 4px;
-  border-radius: 2px;
-}
+
+
 
 /* ===== NAV (botones) ===== */
 .sly-tab-radio { display: none; }
