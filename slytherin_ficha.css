@@ -455,6 +455,9 @@ body{ background:#0b0f0d; margin:0; padding:30px 20px; }
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   padding-bottom: 6px;
+  max-height: 340px;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 .sly-ficha-rel-caja {
   display: flex;
