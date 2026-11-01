@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=EB+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 /* ===== BANNER ===== */
 .sly-squad-banner {
@@ -36,7 +36,6 @@
 .sly-squad-cronologia-header {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 13px 20px;
   cursor: pointer;
 }
@@ -50,25 +49,10 @@
   color: var(--sly-squad-texto);
   text-transform: uppercase;
 }
-.sly-squad-icono-pluma {
-  width: 14px;
-  height: 14px;
-  stroke: var(--sly-squad-acento);
-  fill: none;
-  stroke-width: 1.4;
-}
-.sly-squad-chevron {
-  width: 12px;
-  height: 12px;
-  stroke: var(--sly-squad-acento);
-  fill: none;
-  stroke-width: 1.8;
-  transition: transform 0.25s ease;
-}
+.sly-squad-icono-pluma { font-size: 14px; color: var(--sly-squad-acento); line-height: 1; }
+.sly-squad-chevron { font-size: 12px; color: var(--sly-squad-acento); line-height: 1; display: inline-block; transition: transform 0.25s ease; }
 .sly-squad-cronologia:hover .sly-squad-chevron,
-.sly-squad-cronologia:focus-within .sly-squad-chevron {
-  transform: rotate(180deg);
-}
+.sly-squad-cronologia:focus-within .sly-squad-chevron { transform: rotate(180deg); }
 
 .sly-squad-cronologia-lista {
   max-height: 0;
@@ -92,20 +76,8 @@
   transition: background 0.15s ease;
 }
 .sly-squad-contenedor .sly-squad-cronologia-item:hover { background: var(--sly-squad-acento-suave); }
-.sly-squad-cronologia-item .sly-squad-pluma-tema {
-  width: 15px;
-  height: 15px;
-  stroke: var(--sly-squad-acento);
-  fill: none;
-  stroke-width: 1.4;
-  flex-shrink: 0;
-  animation: sly-squad-pluma-bounce 1.6s ease-in-out infinite;
-}
-.sly-squad-cronologia-item .sly-squad-pluma-tema.inactivo {
-  animation: none;
-  stroke: var(--sly-squad-texto-secundario);
-  opacity: 0.55;
-}
+.sly-squad-cronologia-item .sly-squad-pluma-tema { font-size: 15px; color: var(--sly-squad-acento); line-height: 1; display: inline-block; flex-shrink: 0; animation: sly-squad-pluma-bounce 1.6s ease-in-out infinite; }
+.sly-squad-cronologia-item .sly-squad-pluma-tema.inactivo { animation: none; color: var(--sly-squad-texto-secundario); opacity: 0.55; }
 @keyframes sly-squad-pluma-bounce {
   0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
   40% { transform: translateY(-5px); }
@@ -115,9 +87,7 @@
 /* ===== DIVISOR ===== */
 .sly-squad-divisor {
   text-align: center;
-  color: var(--sly-squad-acento);
   font-size: 13px;
-  letter-spacing: 4px;
   padding: 14px 0;
   opacity: 0.8;
 }
@@ -139,9 +109,6 @@
 .sly-squad-iconos-divisor {
   display: flex;
   align-items: center;
-  color: var(--sly-squad-acento);
-  font-size: 8px;
-  line-height: 1;
   gap: 5px;
   padding: 2px 0;
 }
@@ -167,23 +134,13 @@
   justify-content: center;
   transition: box-shadow 0.2s ease, border-color 0.2s ease;
 }
-.sly-squad-circulo-icono svg {
-  width: 15px;
-  height: 15px;
-  stroke: var(--sly-squad-acento);
-  fill: none;
-  stroke-width: 1.5;
-}
 
-sly-squad-circulo-icono i { width: 16px; height: 16px; font-size: 13px; line-height: 1; color: var(--sly-squad-acento); display: flex; align-items: center; justify-content: center; }
-.sly-squad-item-icono-v:hover .sly-squad-circulo-icono,
-.sly-squad-item-icono-v:focus-within .sly-squad-circulo-icono {
+.sly-squad-item-icono-v:hover,
+.sly-squad-item-icono-v:focus-within {
   border-color: var(--sly-squad-acento);
   box-shadow: 0 0 8px rgba(111, 174, 130, 0.45);
 }
 
-/* Panel que se abre hacia la IZQUIERDA (el ícono está en el borde izquierdo,
-   el panel crece hacia afuera de la columna de íconos) */
 .sly-squad-panel-icono-v {
   position: absolute;
   top: 0;
@@ -207,13 +164,15 @@ sly-squad-circulo-icono i { width: 16px; height: 16px; font-size: 13px; line-hei
 }
 .sly-squad-item-icono-v:hover .sly-squad-panel-icono-v,
 .sly-squad-item-icono-v:focus-within .sly-squad-panel-icono-v {
-  max-width: 220px;
+  max-width: 320px;
   padding: 0 14px;
   opacity: 1;
   transform: translateY(0) scale(1);
 }
-.sly-squad-panel-icono-v .sly-squad-contenido-panel-v {
+.sly-squad-panel-icono-v.sly-squad-contenido-panel-v {
   line-height: 1.3;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .sly-squad-etiqueta-dato-v {
   display: block;
@@ -237,7 +196,6 @@ sly-squad-circulo-icono i { width: 16px; height: 16px; font-size: 13px; line-hei
   border: 1px solid var(--sly-squad-borde);
   background: var(--sly-squad-bg-panel);
   border-radius: 8px;
-  padding: 18px 18px 22px 18px;
 }
 .sly-squad-titulo-post {
   position: absolute;
@@ -272,7 +230,6 @@ sly-squad-circulo-icono i { width: 16px; height: 16px; font-size: 13px; line-hei
   text-align: justify;
   white-space: pre-line;
 }
-.sly-squad-texto-scroll p { margin: 0 0 16px 0; }
 .sly-squad-texto-scroll b { color: #5f9c74; font-weight: 700; }
 .sly-squad-texto-scroll i { color: #7fbf92; font-style: italic; }
 .sly-squad-texto-scroll em {
@@ -281,7 +238,6 @@ sly-squad-circulo-icono i { width: 16px; height: 16px; font-size: 13px; line-hei
   padding: 0 4px;
   border-radius: 2px;
 }
-.sly-squad-texto-scroll p:last-child { margin-bottom: 0; }
 
 /* ===== PERSONAJES ===== */
 .sly-squad-seccion-personajes {
@@ -345,7 +301,6 @@ sly-squad-circulo-icono i { width: 16px; height: 16px; font-size: 13px; line-hei
   --sly-squad-acento-suave: rgba(111, 174, 130, 0.15);
   --sly-squad-texto: #d9e4dc;
   --sly-squad-texto-secundario: #7d9488;
-  --sly-squad-rojo: #a35c5c;
 
   max-width: 540px;
   margin: 0 auto;
@@ -361,6 +316,11 @@ sly-squad-circulo-icono i { width: 16px; height: 16px; font-size: 13px; line-hei
 .sly-squad-contenedor ::-webkit-scrollbar-thumb { background: var(--sly-squad-acento); border-radius: 4px; border: 2px solid var(--sly-squad-bg-panel); }
 .sly-squad-contenedor * { scrollbar-width: thin; scrollbar-color: var(--sly-squad-acento) var(--sly-squad-bg-panel); }
 
+/* ===== CRÉDITOS ===== */
+.sly-squad-contenedor a {
+  color: var(--sly-squad-acento);
+  text-decoration: none;
+}
 .sly-squad-credits {
   text-align: center;
   margin-top: 22px;

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=EB+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 /* ===== BANNER ===== */
 .sly-1x1-banner {
@@ -50,25 +50,10 @@
   color: var(--sly-1x1-texto);
   text-transform: uppercase;
 }
-.sly-1x1-icono-pluma {
-  width: 14px;
-  height: 14px;
-  stroke: var(--sly-1x1-acento);
-  fill: none;
-  stroke-width: 1.4;
-}
-.sly-1x1-chevron {
-  width: 12px;
-  height: 12px;
-  stroke: var(--sly-1x1-acento);
-  fill: none;
-  stroke-width: 1.8;
-  transition: transform 0.25s ease;
-}
+.sly-1x1-icono-pluma { font-size: 14px; color: var(--sly-1x1-acento); line-height: 1; }
+.sly-1x1-chevron { font-size: 12px; color: var(--sly-1x1-acento); line-height: 1; display: inline-block; transition: transform 0.25s ease; }
 .sly-1x1-cronologia:hover .sly-1x1-chevron,
-.sly-1x1-cronologia:focus-within .sly-1x1-chevron {
-  transform: rotate(180deg);
-}
+.sly-1x1-cronologia:focus-within .sly-1x1-chevron { transform: rotate(180deg); }
 
 .sly-1x1-cronologia-lista {
   max-height: 0;
@@ -92,20 +77,8 @@
   transition: background 0.15s ease;
 }
 .sly-1x1-contenedor .sly-1x1-cronologia-item:hover { background: var(--sly-1x1-acento-suave); }
-.sly-1x1-cronologia-item .sly-1x1-pluma-tema {
-  width: 15px;
-  height: 15px;
-  stroke: var(--sly-1x1-acento);
-  fill: none;
-  stroke-width: 1.4;
-  flex-shrink: 0;
-  animation: sly-1x1-pluma-bounce 1.6s ease-in-out infinite;
-}
-.sly-1x1-cronologia-item .sly-1x1-pluma-tema.inactivo {
-  animation: none;
-  stroke: var(--sly-1x1-texto-secundario);
-  opacity: 0.55;
-}
+.sly-1x1-cronologia-item .sly-1x1-pluma-tema { font-size: 15px; color: var(--sly-1x1-acento); line-height: 1; display: inline-block; flex-shrink: 0; animation: sly-1x1-pluma-bounce 1.6s ease-in-out infinite; }
+.sly-1x1-cronologia-item .sly-1x1-pluma-tema.inactivo { animation: none; color: var(--sly-1x1-texto-secundario); opacity: 0.55; }
 @keyframes sly-1x1-pluma-bounce {
   0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
   40% { transform: translateY(-5px); }
@@ -115,9 +88,7 @@
 /* ===== DIVISOR ===== */
 .sly-1x1-divisor {
   text-align: center;
-  color: var(--sly-1x1-acento);
   font-size: 13px;
-  letter-spacing: 4px;
   padding: 14px 0;
   opacity: 0.8;
 }
@@ -139,9 +110,6 @@
 .sly-1x1-iconos-divisor {
   display: flex;
   align-items: center;
-  color: var(--sly-1x1-acento);
-  font-size: 8px;
-  line-height: 1;
   gap: 5px;
   padding: 2px 0;
 }
@@ -166,13 +134,6 @@
   align-items: center;
   justify-content: center;
   transition: box-shadow 0.2s ease, border-color 0.2s ease;
-}
-.sly-1x1-circulo-icono svg {
-  width: 15px;
-  height: 15px;
-  stroke: var(--sly-1x1-acento);
-  fill: none;
-  stroke-width: 1.5;
 }
 .sly-1x1-item-icono-v:hover .sly-1x1-circulo-icono,
 .sly-1x1-item-icono-v:focus-within .sly-1x1-circulo-icono {
@@ -270,7 +231,6 @@
   text-align: justify;
   white-space: pre-line;
 }
-.sly-1x1
 .sly-1x1-texto-scroll b { color: #5f9c74; font-weight: 700; }
 .sly-1x1-texto-scroll i { color: #7fbf92; font-style: italic; }
 .sly-1x1-texto-scroll em {
@@ -279,7 +239,6 @@
   padding: 0 4px;
   border-radius: 2px;
 }
-.sly-1x1-texto-scroll p:last-child { margin-bottom: 0; }
 
 /* ===== PERSONAJES ===== */
 .sly-1x1-seccion-personajes {
@@ -306,7 +265,8 @@
   padding-bottom: 12px;
 }
 .sly-1x1-caja-personaje {
-  flex: 0 0 230px;
+  flex: 0 1 230px;
+  min-width: 0;
   border: 1px solid var(--sly-1x1-borde);
   background: var(--sly-1x1-bg-panel);
 }
@@ -343,7 +303,6 @@
   --sly-1x1-acento-suave: rgba(111, 174, 130, 0.15);
   --sly-1x1-texto: #d9e4dc;
   --sly-1x1-texto-secundario: #7d9488;
-  --sly-1x1-rojo: #a35c5c;
 
   max-width: 540px;
   margin: 0 auto;

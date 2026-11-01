@@ -1,6 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=EB+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap');
-
-body{ background:#0b0f0d; margin:0; padding:30px 20px; }
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 
 /* ===== CONTENEDOR BASE ===== */
 .sly-ficha-contenedor {
@@ -11,7 +9,6 @@ body{ background:#0b0f0d; margin:0; padding:30px 20px; }
   --sly-ficha-acento-suave: rgba(111, 174, 130, 0.15);
   --sly-ficha-texto: #d9e4dc;
   --sly-ficha-texto-secundario: #7d9488;
-  --sly-ficha-rojo: #a35c5c;
 
   max-width: 540px;
   margin: 0 auto;
@@ -36,7 +33,6 @@ body{ background:#0b0f0d; margin:0; padding:30px 20px; }
   display: block;
   filter: saturate(0.55) brightness(0.75) contrast(1.05);
 }
-
 .sly-ficha-faceclaim {
   position: absolute;
   left: 16px;
@@ -82,10 +78,6 @@ body{ background:#0b0f0d; margin:0; padding:30px 20px; }
   text-transform: none;
 }
 
-/* ===== TABLILLA POST (caja principal + sidebar iconos) ===== */
-
-
-
 /* ===== NAV (botones) ===== */
 .sly-tab-radio { display: none; }
 .sly-ficha-nav {
@@ -110,13 +102,6 @@ body{ background:#0b0f0d; margin:0; padding:30px 20px; }
   text-transform: uppercase;
   cursor: pointer;
   transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
-}
-.sly-ficha-tab svg {
-  width: 13px;
-  height: 13px;
-  stroke: currentColor;
-  fill: none;
-  stroke-width: 1.5;
 }
 .sly-ficha-tab:hover {
   border-color: var(--sly-ficha-acento);
@@ -150,14 +135,6 @@ body{ background:#0b0f0d; margin:0; padding:30px 20px; }
   border-radius: 6px;
   text-align: center;
 }
-.sly-ficha-dato svg {
-  width: 13px;
-  height: 13px;
-  stroke: rgba(111, 174, 130, 0.55);
-  fill: none;
-  stroke-width: 1.3;
-  display: block;
-}
 .sly-ficha-dato-valor {
   font-family: 'Cormorant Garamond', serif;
   font-size: 10.5px;
@@ -179,6 +156,8 @@ body{ background:#0b0f0d; margin:0; padding:30px 20px; }
 #sly-tab-historia:checked ~ .sly-page-historia,
 #sly-tab-cronologia:checked ~ .sly-page-cronologia,
 #sly-tab-relaciones:checked ~ .sly-page-relaciones { display: block; }
+/* Si el foro quitara las pestañas, se muestran todas las secciones */
+.sly-ficha-contenedor:not(:has(.sly-tab-radio:checked)) .sly-ficha-page { display: block; }
 
 .sly-ficha-titulo-seccion {
   text-align: center;
