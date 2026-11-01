@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=IBM+Plex+Mono:wght@400&display=swap');
 
 /* ===== BANNER ===== */
 .sly-post-banner {
@@ -30,6 +30,7 @@
 
 /* ===== CAJA PRINCIPAL ===== */
 .sly-post-caja-principal {
+  margin-top: 64px;
   display: flex;
   gap: 18px;
   padding: 0 20px;
@@ -52,6 +53,12 @@
   flex: 1;
   height: 1px;
   background: var(--sly-post-borde);
+}
+.sly-post-emblema {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M301.563 20.22c-8.64-.033-17.075.304-25.22.968-200.737 0-184.708 197.468 0 226 184.71 28.53 137.485 190.906 9.907 190.906-84.162 0-140.85-19.887-181.03-64.156-42.064-46.34-12.496-99.594 44.28-51.938 57.026 47.867 100.32 83.576 171.813 28-89.54 29.698-124.626-42.73-188.313-81.875-60.388-37.117-138.036 38.746-86 121.25 43.402 68.815 152.713 107.78 243.344 107.78 220.645 0 259.324-271.296 63.094-301.936-69.28-10.818-119.376-23.398-143.688-61.907-17.817-28.226 32.672-85.843 97.656-59.688 9.406 15.75 13.877 35.578 15.375 65.47l83.5 39.53 3.22-5.438.063.125c8.535-4.49 14.952-14.657 20.906-26.03-10.923 4.674-23.103 4.475-34.69 1.468a84.447 84.447 0 0 1-8.092-6c-23.392-19.585-28.737-45.978-11.938-58.97 12.435-9.615 33.52-9.19 53.125-.374 8.603 18.074 9.702 35.265 11.188 52.5 10.24-14.024 15.704-29.453 18.562-45.656l10.72-18.063C421.43 35.528 357.307 20.423 301.56 20.22zm42.812 22.06c13.64.758 28.504 1.625 41.72 9.407l-9.47 16.126c-8.187-4.822-19.96-6.137-33.28-6.876l1.03-18.656z" fill="%236fae82"/></svg>') no-repeat center / contain;
 }
 .sly-post-item-icono-v {
   position: relative;
@@ -77,8 +84,8 @@
   fill: none;
   stroke-width: 1.5;
 }
-.sly-post-item-icono-v:hover .sly-post-circulo-icono,
-.sly-post-item-icono-v:focus-within .sly-post-circulo-icono {
+.sly-post-item-icono-v:hover,
+.sly-post-item-icono-v:focus-within {
   border-color: var(--sly-post-acento);
   box-shadow: 0 0 8px rgba(111, 174, 130, 0.45);
 }
@@ -111,8 +118,10 @@
   opacity: 1;
   transform: translateY(0) scale(1);
 }
-.sly-post-panel-icono-v .sly-post-contenido-panel-v {
+.sly-post-panel-icono-v.sly-post-contenido-panel-v {
   line-height: 1.3;
+  flex-direction: column;
+  align-items: flex-start;
 }
 .sly-post-etiqueta-dato-v {
   display: block;
@@ -205,12 +214,9 @@
   text-align: center;
   margin-top: 22px;
 }
-.sly-post-contenedor .sly-post-credit-name {
-  font-family: 'Cormorant Garamond', serif;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 11px;
-  color: rgba(111, 174, 130, 0.45);
-  text-decoration: none;
+.sly-post-credito {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M254.25 15.344c-132.537 0-240.188 107.62-240.188 240.156 0 132.537 107.65 240.188 240.188 240.188 132.537 0 240.156-107.65 240.156-240.188 0-132.537-107.62-240.156-240.156-240.156zm0 18.687c122.436 0 221.47 99.034 221.47 221.47 0 65.65-28.465 124.583-73.75 165.125V238.75l14-22.78h-7.595L364 101.5l-43.813 114.47h-8.156l14.595 22.78v33.875h-36.813v-88.188l14.625-22.78h-7.593l-44.406-114.47-44.375 114.47h-7.594l14.03 22.78v123.22h-37.375v-18.094l14.594-22.782h-8.19l-43.78-114.467L95.344 266.78H87.75l14.03 22.783V416.25C59.25 375.9 32.75 318.83 32.75 255.5c0-122.436 99.064-221.47 221.5-221.47zm1.094 160.532h18.687v36.344h-18.686v-36.344zm110.156 87.97h18.688v36.312H365.5V282.53zm-246.656 22.03h18.687v36.344h-18.686v-36.344zm50.875 29.407h18.686v36.342H169.72V333.97zm170.81 30.5h18.69v36.342h-18.69V364.47z" fill="%236fae82"/></svg>') no-repeat center / contain;
 }
-.sly-post-contenedor .sly-post-credit-name:hover { color: rgba(111, 174, 130, 0.75); transition: color 0.2s ease; }
